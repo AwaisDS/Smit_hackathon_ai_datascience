@@ -47,7 +47,7 @@ if st.button("Predict Launch Outcome"):
 
 # Optional Dashboard Section
 st.markdown("---")
-st.subheader("📊 Sample Launch Data Overview (Optional)")
+st.subheader("📊 Sample Launch Data Overview")
 
 # Load sample dataset (if available)
 try:
@@ -66,6 +66,11 @@ try:
     fig2, ax2 = plt.subplots(figsize=(8, 4))
     sns.heatmap(corr, annot=True, cmap='Blues', ax=ax2)
     st.pyplot(fig2)
+
+    st.markdown("---")
+    st.subheader("📊 Interactive Visualizations")
+
+   
 
 except FileNotFoundError:
     st.warning("🔍 'cleaned_launch_data.csv' not found. Dashboard visuals won't be shown.")
